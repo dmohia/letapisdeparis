@@ -51,26 +51,23 @@ body {
 /* Typography */
 .section-title {
     font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 1.1;
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 1.2;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
-    letter-spacing: -0.02em;
-    text-transform: lowercase;
-    font-style: italic;
+    letter-spacing: -0.01em;
 }
 
 .section-subtitle {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--color-secondary);
     margin-bottom: var(--spacing-lg);
     max-width: 700px;
     line-height: 1.6;
     margin-left: auto;
     margin-right: auto;
-    font-style: italic;
 }
 
 /* Buttons */
@@ -251,6 +248,7 @@ body {
     line-height: 1.1;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
+    letter-spacing: -0.01em;
 }
 
 .hero-accent {
@@ -420,6 +418,7 @@ body {
     font-weight: 500;
     margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
+    letter-spacing: -0.005em;
 }
 
 .service-card p {
@@ -502,6 +501,7 @@ body {
     font-weight: 500;
     margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
+    letter-spacing: -0.005em;
 }
 
 .step-content p {
