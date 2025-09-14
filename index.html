@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Tapis de Paris - Entretien & Restauration de Tapis de Luxe</title>
+    <meta name="description" content="Spécialistes de l'entretien, nettoyage et restauration de kilims, tapis et tapisseries de luxe. Savoir-faire artisanal depuis 1952.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Le Tapis de Paris</a>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#processus" class="nav-link">Processus</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button class="nav-hamburger" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    L'art de préserver<br>
+                    <span class="hero-accent">vos tapis de luxe</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Depuis trois générations, nous perpétuons l'excellence dans l'entretien 
+                    et la restauration de tapis et tapisseries d'exception.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Demander un devis</a>
+                    <a href="#services" class="btn btn-secondary">Nos services</a>
+                </div>
+            </div>
+            
+            <!-- Visual Carpet Representation -->
+            <div class="hero-visual">
+                <div class="carpet-showcase">
+                    <div class="carpet-item">
+                        <img src="assets/images/tapis-rouge.jpg" alt="Tapis rouge traditionnel" class="carpet-image" loading="lazy">
+                    </div>
+                    <div class="carpet-item">
+                        <img src="assets/images/tapis-2.jpg" alt="Tapis persan élégant" class="carpet-image" loading="lazy">
+                    </div>
+                    <div class="carpet-item">
+                        <img src="assets/images/tapis-3.webp" alt="Tapis moderne" class="carpet-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos expertises</h2>
+                <p class="section-subtitle">
+                    Une approche sur-mesure pour chaque pièce d'exception
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="nettoyage">
+                    <div class="service-image-container">
+                        <img src="assets/images/Nettoyage artisanal.avif" alt="Nettoyage professionnel de tapis" class="service-image">
+                        <div class="service-badge">Nettoyage</div>
+                    </div>
+                    <h3>Nettoyage professionnel</h3>
+                    <p>Techniques ancestrales et technologies modernes pour un nettoyage en profondeur respectueux des fibres.</p>
+                    <ul class="service-features">
+                        <li>Analyse préalable des matériaux</li>
+                        <li>Nettoyage à sec ou humide selon besoin</li>
+                        <li>Traitement des taches spécialisé</li>
+                        <li>Séchage contrôlé</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-service="restauration">
+                    <div class="service-image-container">
+                        <img src="assets/images/restauration.jpeg" alt="Restauration d'art de tapis anciens" class="service-image">
+                        <div class="service-badge">Restauration</div>
+                    </div>
+                    <h3>Restauration d'art</h3>
+                    <p>Redonner vie aux pièces anciennes avec le savoir-faire de nos maîtres artisans.</p>
+                    <ul class="service-features">
+                        <li>Retissage à la main</li>
+                        <li>Réparation des lisières</li>
+                        <li>Consolidation de la structure</li>
+                        <li>Respect des techniques originales</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-service="conservation">
+                    <div class="service-image-container">
+                        <img src="assets/images/conservation.webp" alt="Conservation préventive de tapisseries" class="service-image">
+                        <div class="service-badge">Conservation</div>
+                    </div>
+                    <h3>Conservation préventive</h3>
+                    <p>Préserver l'authenticité et la beauté de vos œuvres textiles pour les générations futures.</p>
+                    <ul class="service-features">
+                        <li>Traitement anti-parasitaire</li>
+                        <li>Contrôle d'humidité</li>
+                        <li>Protection UV</li>
+                        <li>Conseils d'entretien</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="processus" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre processus</h2>
+                <p class="section-subtitle">
+                    Chaque tapis est unique, notre approche aussi
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step" data-step="1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Expertise initiale</h3>
+                        <p>Analyse minutieuse de l'état, de la composition et de l'origine de votre pièce.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Devis personnalisé</h3>
+                        <p>Proposition détaillée des interventions nécessaires avec délais et tarifs transparents.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Traitement expert</h3>
+                        <p>Mise en œuvre des techniques appropriées dans nos ateliers spécialisés.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="4">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Livraison soignée</h3>
+                        <p>Retour de votre tapis avec conseils d'entretien et certificat de traitement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Trois générations d'excellence</h2>
+                    <p class="about-intro">
+                        Fondé en 1952, Le Tapis de Paris perpétue un savoir-faire unique 
+                        dans l'entretien et la restauration de kilims, tapis et tapisseries d'exception.
+                    </p>
+                    
+                    <div class="about-values">
+                        <div class="value">
+                            <h4>Expertise</h4>
+                            <p>Formation continue de nos artisans aux techniques traditionnelles et modernes.</p>
+                        </div>
+                        <div class="value">
+                            <h4>Respect</h4>
+                            <p>Préservation de l'authenticité et de la valeur patrimoniale de chaque pièce.</p>
+                        </div>
+                        <div class="value">
+                            <h4>Innovation</h4>
+                            <p>Intégration des dernières technologies dans le respect des méthodes ancestrales.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="heritage-display">
+                        <div class="heritage-item year-1952">1952</div>
+                        <div class="heritage-item year-1980">1980</div>
+                        <div class="heritage-item year-2024">2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerie" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre galerie</h2>
+                <p class="section-subtitle">
+                    Découvrez quelques-unes des pièces d'exception restaurées dans nos ateliers
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/tapis-rouge.jpg" alt="Tapis rouge traditionnel restauré" class="gallery-image" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Tapis Rouge Traditionnel</h4>
+                            <p>Restauration complète • Nettoyage spécialisé</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/tapis-2.jpg" alt="Tapis persan élégant restauré" class="gallery-image" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Tapis Persan Élégant</h4>
+                            <p>Retissage artisanal • Conservation préventive</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/tapis-4.webp" alt="Tapis moderne contemporain restauré" class="gallery-image" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Tapis Contemporain</h4>
+                            <p>Expertise complète • Restauration d'art</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/tapisserie.jpg" alt="Tapisserie ancienne restaurée" class="gallery-image" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Tapisserie Ancienne</h4>
+                            <p>Conservation • Techniques ancestrales</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/couloir.webp" alt="Tapis de couloir restauré" class="gallery-image" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Tapis de Couloir</h4>
+                            <p>Nettoyage professionnel • Réparation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Contactez-nous</h2>
+                    <p class="contact-intro">
+                        Confiez-nous vos tapis de valeur. Notre équipe d'experts vous accompagne 
+                        dans tous vos projets de restauration et d'entretien.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>Adresse</h4>
+                            <p>123 Rue de l'Artisanat<br>75001 Paris, France</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Téléphone</h4>
+                            <p>+33 (0)1 23 45 67 89</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p>contact@letapisdeparis.fr</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Horaires</h4>
+                            <p>Lun-Ven: 9h-18h<br>Sur rendez-vous uniquement</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service souhaité</label>
+                            <select id="service" name="service">
+                                <option value="">Choisissez un service</option>
+                                <option value="nettoyage">Nettoyage professionnel</option>
+                                <option value="restauration">Restauration</option>
+                                <option value="conservation">Conservation</option>
+                                <option value="expertise">Expertise</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre tapis, son état, vos besoins..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Demander un devis gratuit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Le Tapis de Paris</h3>
+                    <p>Excellence et tradition depuis 1952</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#about">À propos</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Le Tapis de Paris. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
