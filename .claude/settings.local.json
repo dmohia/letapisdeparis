@@ -5,7 +5,8 @@
       "Bash(open index.html)",
       "Bash(npx surge:*)",
       "Bash(git branch:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
