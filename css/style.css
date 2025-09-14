@@ -623,8 +623,8 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow-light);
     transition: var(--transition);
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .gallery-item.visible {
