@@ -11,7 +11,9 @@
       "Bash(python3:*)",
       "Bash(open \"http://localhost:8000\")",
       "Bash(open \"http://localhost:8002\")",
-      "WebFetch(domain:dmohia.github.io)"
+      "WebFetch(domain:dmohia.github.io)",
+      "Bash(grep:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
