@@ -38,33 +38,41 @@
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    L'art de préserver<br>
-                    <span class="hero-accent">vos tapis de luxe</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Spécialistes de l'entretien, du nettoyage et de la restauration 
-                    de kilims, tapis et tapisseries de luxe avec un savoir-faire artisanal.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Demander un devis</a>
-                    <a href="#services" class="btn btn-secondary">Nos services</a>
+            <div class="hero-layout">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        L'art de préserver
+                        <span class="hero-accent">vos tapis de luxe</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Maîtres artisans spécialisés dans l'entretien, la restauration et la conservation
+                        de kilims, tapis persans et tapisseries d'exception.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Demander un devis</span>
+                        </a>
+                        <a href="#services" class="btn btn-outline">
+                            <span>Découvrir nos services</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Visual Showcase of Excellence -->
-            <div class="hero-visual">
-                <div class="excellence-showcase">
-                    <div class="showcase-item main-image">
-                        <img src="assets/images/tapis-4.webp" alt="Tapis moderne restauré" class="showcase-image">
-                    </div>
-                    <div class="showcase-item secondary-image">
-                        <img src="assets/images/tapisserie.jpg" alt="Tapisserie ancienne" class="showcase-image">
-                    </div>
-                    <div class="showcase-item tertiary-image">
-                        <img src="assets/images/tapis-3.webp" alt="Tapis traditionnel" class="showcase-image">
+
+                <!-- Right Visual -->
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <div class="hero-image main-carpet">
+                            <img src="assets/images/tapis-4.webp" alt="Tapis persan restauré avec expertise" loading="eager">
+                            <div class="image-overlay"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,41 +150,32 @@
             
             <div class="process-journey">
                 <div class="journey-path">
-                    <div class="path-line"></div>
-                    <div class="process-card" data-step="1">
-                        <div class="step-icon">
-                            <span class="step-number">1</span>
-                        </div>
+                    <div class="process-card">
+                        <span class="step-number">1</span>
                         <div class="card-content">
                             <h3>Expertise Initiale</h3>
                             <p>Analyse minutieuse de l'état, de la composition et de l'origine de votre pièce.</p>
                         </div>
                     </div>
-                    
-                    <div class="process-card" data-step="2">
-                        <div class="step-icon">
-                            <span class="step-number">2</span>
-                        </div>
+
+                    <div class="process-card">
+                        <span class="step-number">2</span>
                         <div class="card-content">
                             <h3>Devis Personnalisé</h3>
                             <p>Proposition détaillée des interventions nécessaires avec délais et tarifs transparents.</p>
                         </div>
                     </div>
-                    
-                    <div class="process-card" data-step="3">
-                        <div class="step-icon">
-                            <span class="step-number">3</span>
-                        </div>
+
+                    <div class="process-card">
+                        <span class="step-number">3</span>
                         <div class="card-content">
                             <h3>Traitement Expert</h3>
                             <p>Mise en œuvre des techniques appropriées dans nos ateliers spécialisés.</p>
                         </div>
                     </div>
-                    
-                    <div class="process-card" data-step="4">
-                        <div class="step-icon">
-                            <span class="step-number">4</span>
-                        </div>
+
+                    <div class="process-card">
+                        <span class="step-number">4</span>
                         <div class="card-content">
                             <h3>Livraison Soignée</h3>
                             <p>Retour de votre tapis avec conseils d'entretien et certificat de traitement.</p>
@@ -444,7 +443,18 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <h4>Adresse</h4>
-                            <p>123 Rue de l'Artisanat<br>75001 Paris, France</p>
+                            <p>10-12 rue Montalivet<br>75008 Paris, France</p>
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2087249417447!2d2.3210158!3d48.8734512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2s10%20Rue%20Montalivet%2C%2075008%20Paris%2C%20France!5e0!3m2!1sfr!2sfr!4v1695000000000!5m2!1sfr!2sfr"
+                                    width="100%"
+                                    height="200"
+                                    style="border:0; border-radius: 8px; margin-top: 1rem;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <h4>Téléphone</h4>
@@ -457,14 +467,6 @@
                         <div class="contact-item">
                             <h4>Horaires</h4>
                             <p>Lun-Ven: 9h-18h<br>Sur rendez-vous uniquement</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Direction</h4>
-                            <p>Madame Safiyya el Kaviyya<br>
-                            Présidente Directrice Générale<br>
-                            VP of Finance, VP of Sales<br>
-                            Cuisinière en Chef<br>
-                            Heffafa Deluxe et Trieuse de Gmel</p>
                         </div>
                     </div>
                 </div>
@@ -524,7 +526,7 @@
                     <a href="#services">Services</a>
                     <a href="#about">À propos</a>
                     <a href="#contact">Contact</a>
-                    <a href="#">Mentions légales</a>
+                    <a href="pages/mentions-legales.html">Mentions légales</a>
                 </div>
             </div>
             
