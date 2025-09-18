@@ -243,9 +243,9 @@ body {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: 3.5rem;
-    font-weight: 500;
-    line-height: 1.1;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 1.2;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
     letter-spacing: -0.01em;
@@ -253,15 +253,16 @@ body {
 
 .hero-accent {
     color: var(--color-accent);
-    font-style: italic;
+    font-weight: 300;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: var(--color-secondary);
     margin-bottom: var(--spacing-xl);
     max-width: 500px;
+    font-weight: 300;
 }
 
 .hero-actions {
@@ -281,8 +282,8 @@ body {
 /* Carpet Showcase */
 .excellence-showcase {
     position: relative;
-    width: 550px;
-    height: 450px;
+    width: 600px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,26 +298,26 @@ body {
 }
 
 .showcase-item.main-image {
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: 220px;
     top: 0;
     left: 0;
     z-index: 3;
 }
 
 .showcase-item.secondary-image {
-    width: 240px;
-    height: 160px;
-    top: 120px;
-    right: 20px;
+    width: 260px;
+    height: 180px;
+    top: 150px;
+    right: 0;
     z-index: 2;
 }
 
 .showcase-item.tertiary-image {
-    width: 220px;
-    height: 140px;
-    bottom: 30px;
-    left: 140px;
+    width: 240px;
+    height: 160px;
+    bottom: 20px;
+    left: 180px;
     z-index: 1;
 }
 
@@ -954,23 +955,29 @@ body {
     }
     
     .excellence-showcase {
-        width: 380px;
-        height: 300px;
+        width: 400px;
+        height: 320px;
     }
     
     .showcase-item.main-image {
-        width: 200px;
-        height: 140px;
+        width: 220px;
+        height: 150px;
+        top: 0;
+        left: 0;
     }
     
     .showcase-item.secondary-image {
-        width: 170px;
-        height: 120px;
+        width: 190px;
+        height: 130px;
+        top: 120px;
+        right: 0;
     }
     
     .showcase-item.tertiary-image {
-        width: 150px;
-        height: 100px;
+        width: 170px;
+        height: 110px;
+        bottom: 20px;
+        left: 120px;
     }
     
     .video-grid {
