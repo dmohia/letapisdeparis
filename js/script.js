@@ -127,6 +127,14 @@ ${message}`;
         }, 5000);
     }
 
+    // Check for success parameter and show thank you message
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
+        showPopup('Merci ! Votre demande de devis a été envoyée avec succès. Nous vous contacterons rapidement.', 'success');
+        // Clean URL
+        window.history.replaceState({}, document.title, window.location.pathname + '#contact');
+    }
+
     // Add scroll effect to navigation
     window.addEventListener('scroll', function() {
         const nav = document.querySelector('.nav');
