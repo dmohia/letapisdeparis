@@ -275,14 +275,62 @@ body {
     margin-right: auto;
 }
 
-.btn-hero-phone {
+.btn-hero-primary {
+    background: linear-gradient(135deg, var(--color-brown) 0%, #A0522D 50%, #8B4513 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1.4rem 2.5rem;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    box-shadow:
+        0 6px 25px rgba(139, 69, 19, 0.25),
+        0 2px 10px rgba(139, 69, 19, 0.15);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-hero-primary:hover::before {
+    left: 100%;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 10px 35px rgba(139, 69, 19, 0.35),
+        0 4px 15px rgba(139, 69, 19, 0.25);
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #A0522D 0%, var(--color-brown) 50%, #654321 100%);
+}
+
+.btn-hero-secondary {
     background: linear-gradient(135deg, #ffffff, #f8f8f8);
     color: var(--color-brown);
     text-decoration: none;
-    padding: 1.3rem 2.5rem;
+    padding: 1.4rem 2.5rem;
     border-radius: 15px;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     text-align: center;
     border: 2px solid rgba(139, 69, 19, 0.15);
     transition: all 0.3s ease;
@@ -298,7 +346,7 @@ body {
     overflow: hidden;
 }
 
-.btn-hero-phone::before {
+.btn-hero-secondary::before {
     content: '';
     position: absolute;
     top: 0;
@@ -309,11 +357,11 @@ body {
     transition: left 0.5s ease;
 }
 
-.btn-hero-phone:hover::before {
+.btn-hero-secondary:hover::before {
     left: 100%;
 }
 
-.btn-hero-phone:hover {
+.btn-hero-secondary:hover {
     transform: translateY(-3px);
     box-shadow:
         0 8px 25px rgba(139, 69, 19, 0.12),
@@ -321,54 +369,6 @@ body {
     text-decoration: none;
     color: var(--color-brown);
     border-color: rgba(139, 69, 19, 0.25);
-}
-
-.btn-hero-devis {
-    background: linear-gradient(135deg, var(--color-brown) 0%, #A0522D 50%, #8B4513 100%);
-    color: white;
-    text-decoration: none;
-    padding: 1.4rem 2.5rem;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 1.15rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70px;
-    box-shadow:
-        0 6px 25px rgba(139, 69, 19, 0.25),
-        0 2px 10px rgba(139, 69, 19, 0.15);
-    border: none;
-    position: relative;
-    overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.btn-hero-devis::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
-}
-
-.btn-hero-devis:hover::before {
-    left: 100%;
-}
-
-.btn-hero-devis:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 10px 35px rgba(139, 69, 19, 0.35),
-        0 4px 15px rgba(139, 69, 19, 0.25);
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(135deg, #A0522D 0%, var(--color-brown) 50%, #654321 100%);
 }
 
 .hero-actions-secondary {
@@ -1035,8 +1035,8 @@ body {
         gap: 0.8rem;
     }
 
-    .btn-hero-phone,
-    .btn-hero-devis {
+    .btn-hero-primary,
+    .btn-hero-secondary {
         width: 100%;
         padding: 1.2rem 1.5rem;
         font-size: 1rem;
@@ -1044,18 +1044,18 @@ body {
         min-height: 60px;
     }
 
-    .btn-hero-phone:hover,
-    .btn-hero-devis:hover {
+    .btn-hero-primary:hover,
+    .btn-hero-secondary:hover {
         transform: none; /* Disable hover transforms on mobile */
     }
 
-    .btn-hero-phone:hover::before,
-    .btn-hero-devis:hover::before {
+    .btn-hero-primary:hover::before,
+    .btn-hero-secondary:hover::before {
         display: none; /* Disable shine effect on mobile */
     }
 
-    .btn-hero-phone:active,
-    .btn-hero-devis:active {
+    .btn-hero-primary:active,
+    .btn-hero-secondary:active {
         transform: scale(0.97);
         transition: transform 0.15s ease;
     }
