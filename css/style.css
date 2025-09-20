@@ -215,6 +215,77 @@ body {
     font-weight: 300;
 }
 
+/* Hero CTA Section */
+.hero-cta {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cta-highlight {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(160, 82, 45, 0.1));
+    border: 2px solid rgba(139, 69, 19, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.cta-highlight h3 {
+    color: var(--color-brown);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+}
+
+.cta-highlight p {
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.btn-cta-main {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.4);
+    border: 3px solid #FFD700;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.btn-cta-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 165, 0, 0.6);
+    text-decoration: none;
+    color: #000;
+}
+
+.cta-text {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.cta-subtext {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+    opacity: 0.9;
+}
+
+.hero-actions-secondary {
+    margin-top: 1rem;
+}
+
 .hero-actions {
     display: flex;
     gap: 1.5rem;

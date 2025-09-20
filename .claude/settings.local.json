@@ -14,7 +14,8 @@
       "WebFetch(domain:dmohia.github.io)",
       "Bash(grep:*)",
       "Bash(git checkout:*)",
-      "Bash(open \"http://localhost:8001\")"
+      "Bash(open \"http://localhost:8001\")",
+      "Bash(kill:*)"
     ],
     "deny": [],
     "ask": []
