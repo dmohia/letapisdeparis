@@ -20,9 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scrolling for anchor links
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
+    // Smooth scrolling for anchor links only (not form buttons)
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+        // Skip if it's inside a form or is a form button
+        if (link.closest('form') || link.type === 'submit') return;
+
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
@@ -38,42 +41,90 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form handling
+    // Form handling avec AJAX pour éviter la redirection
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Simple form validation
+            // Validation
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
             if (!name || !email || !message) {
-                alert('Veuillez remplir tous les champs obligatoires.');
+                showPopup('Veuillez remplir tous les champs obligatoires.', 'error');
                 return;
             }
 
-            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('Veuillez entrer une adresse email valide.');
+                showPopup('Veuillez entrer une adresse email valide.', 'error');
                 return;
             }
 
-            // Simulate form submission
+            // Bouton loading
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Envoi en cours...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                alert('Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.');
-                contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
+            // Solution mailto direct
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const serviceLabels = {
+                'nettoyage': 'Nettoyage professionnel',
+                'restauration': 'Restauration',
+                'conservation': 'Conservation'
+            };
+            const selectedService = serviceLabels[service] || 'Demande générale';
+            const subject = `[${selectedService}] ${name}`;
+            const body = `Nom: ${name}
+Email: ${email}
+Téléphone: ${phone || 'Non renseigné'}
+Service demandé: ${selectedService}
+
+Message:
+${message}`;
+
+            const mailtoLink = `mailto:contact@letapisdeparis.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+
+            showPopup('Votre client email va s\'ouvrir avec le message pré-rempli. Envoyez-le pour finaliser votre demande.', 'success');
+            contactForm.reset();
+
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
         });
+    }
+
+    // Fonction pour afficher les popups
+    function showPopup(message, type) {
+        // Supprimer popup existant
+        const existingPopup = document.querySelector('.custom-popup');
+        if (existingPopup) {
+            existingPopup.remove();
+        }
+
+        // Créer le popup
+        const popup = document.createElement('div');
+        popup.className = `custom-popup ${type}`;
+        popup.innerHTML = `
+            <div class="popup-content">
+                <span class="popup-icon">${type === 'success' ? '✓' : '⚠'}</span>
+                <p>${message}</p>
+                <button class="popup-close" onclick="this.parentElement.parentElement.remove()">OK</button>
+            </div>
+        `;
+
+        document.body.appendChild(popup);
+
+        // Auto-remove après 5 secondes
+        setTimeout(() => {
+            if (popup.parentElement) {
+                popup.remove();
+            }
+        }, 5000);
     }
 
     // Add scroll effect to navigation
