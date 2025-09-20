@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form handling avec AJAX pour éviter la redirection
+    // Form handling désactivé - utilise Formspree directement
     const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
+    if (contactForm && false) { // Désactivé temporairement
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 

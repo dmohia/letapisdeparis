@@ -440,7 +440,7 @@
                 </div>
 
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xgvwngpy" method="POST">
                         <div class="form-group">
                             <label for="name">Nom complet *</label>
                             <input type="text" id="name" name="name" required>
@@ -448,7 +448,7 @@
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="_replyto" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
@@ -470,6 +470,10 @@
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" rows="5" placeholder="Décrivez votre tapis, son état, vos besoins..." required></textarea>
                         </div>
+
+                        <!-- Champs cachés pour Formspree -->
+                        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Le Tapis de Paris">
+                        <input type="hidden" name="_next" value="https://dmohia.github.io/atelier-du-tapis/#contact">
 
                         <button type="submit" class="btn btn-primary">Demander un devis gratuit</button>
                     </form>
