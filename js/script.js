@@ -41,60 +41,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form handling désactivé - utilise Formspree directement
+    // Form validation avant soumission
     const contactForm = document.getElementById('contactForm');
-    if (contactForm && false) { // Désactivé temporairement
+    if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
             // Validation
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const message = document.getElementById('message').value.trim();
 
             if (!name || !email || !message) {
+                e.preventDefault();
                 showPopup('Veuillez remplir tous les champs obligatoires.', 'error');
                 return;
             }
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // Validation email renforcée
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
             if (!emailRegex.test(email)) {
+                e.preventDefault();
                 showPopup('Veuillez entrer une adresse email valide.', 'error');
                 return;
             }
 
-            // Bouton loading
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Envoi en cours...';
-            submitBtn.disabled = true;
+            // Validation téléphone international (si rempli)
+            if (phone) {
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{6,20}$/;
+                const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
 
-            // Solution mailto direct
-            const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
-            const serviceLabels = {
-                'nettoyage': 'Nettoyage professionnel',
-                'restauration': 'Restauration',
-                'conservation': 'Conservation'
-            };
-            const selectedService = serviceLabels[service] || 'Demande générale';
-            const subject = `[${selectedService}] ${name}`;
-            const body = `Nom: ${name}
-Email: ${email}
-Téléphone: ${phone || 'Non renseigné'}
-Service demandé: ${selectedService}
+                if (!phoneRegex.test(phone) || cleanPhone.length < 6 || cleanPhone.length > 20) {
+                    e.preventDefault();
+                    showPopup('Veuillez entrer un numéro de téléphone valide (format international accepté).', 'error');
+                    return;
+                }
+            }
 
-Message:
-${message}`;
-
-            const mailtoLink = `mailto:contact@letapisdeparis.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-
-            showPopup('Votre client email va s\'ouvrir avec le message pré-rempli. Envoyez-le pour finaliser votre demande.', 'success');
-            contactForm.reset();
-
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
+            // Si toutes les validations passent, laisser Formspree traiter le formulaire
+            showPopup('Envoi en cours...', 'success');
         });
     }
 
