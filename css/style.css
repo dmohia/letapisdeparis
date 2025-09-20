@@ -222,12 +222,31 @@ body {
 }
 
 .cta-highlight {
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(160, 82, 45, 0.1));
-    border: 2px solid rgba(139, 69, 19, 0.2);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(248, 248, 248, 0.95) 100%
+    );
+    border: 2px solid rgba(139, 69, 19, 0.12);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    backdrop-filter: blur(15px);
+    box-shadow:
+        0 8px 32px rgba(139, 69, 19, 0.08),
+        0 2px 16px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-brown), #A0522D, var(--color-brown));
+    border-radius: 20px 20px 0 0;
 }
 
 .cta-highlight h3 {
@@ -257,55 +276,99 @@ body {
 }
 
 .btn-hero-phone {
-    background: #f5f5f0;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
     color: var(--color-brown);
     text-decoration: none;
-    padding: 1.2rem 2rem;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
-    border: 2px solid rgba(139, 69, 19, 0.2);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 60px;
-    box-shadow: 0 2px 10px rgba(139, 69, 19, 0.1);
-}
-
-.btn-hero-phone:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.2);
-    text-decoration: none;
-    color: var(--color-brown);
-    background: #f0f0eb;
-}
-
-.btn-hero-devis {
-    background: linear-gradient(135deg, var(--color-brown), #A0522D);
-    color: white;
-    text-decoration: none;
-    padding: 1.4rem 2.5rem;
-    border-radius: 25px;
+    padding: 1.3rem 2.5rem;
+    border-radius: 15px;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-align: center;
+    border: 2px solid rgba(139, 69, 19, 0.15);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 65px;
-    box-shadow: 0 4px 20px rgba(139, 69, 19, 0.3);
+    box-shadow:
+        0 4px 15px rgba(139, 69, 19, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hero-phone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-hero-phone:hover::before {
+    left: 100%;
+}
+
+.btn-hero-phone:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(139, 69, 19, 0.12),
+        0 4px 15px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: var(--color-brown);
+    border-color: rgba(139, 69, 19, 0.25);
+}
+
+.btn-hero-devis {
+    background: linear-gradient(135deg, var(--color-brown) 0%, #A0522D 50%, #8B4513 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1.4rem 2.5rem;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    box-shadow:
+        0 6px 25px rgba(139, 69, 19, 0.25),
+        0 2px 10px rgba(139, 69, 19, 0.15);
     border: none;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero-devis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-hero-devis:hover::before {
+    left: 100%;
 }
 
 .btn-hero-devis:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(139, 69, 19, 0.4);
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 35px rgba(139, 69, 19, 0.35),
+        0 4px 15px rgba(139, 69, 19, 0.25);
     text-decoration: none;
     color: white;
-    background: linear-gradient(135deg, #A0522D, var(--color-brown));
+    background: linear-gradient(135deg, #A0522D 0%, var(--color-brown) 50%, #654321 100%);
 }
 
 .hero-actions-secondary {
@@ -975,9 +1038,10 @@ body {
     .btn-hero-phone,
     .btn-hero-devis {
         width: 100%;
-        padding: 1rem 1.5rem;
-        font-size: 0.95rem;
-        border-radius: 20px;
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 12px;
+        min-height: 60px;
     }
 
     .btn-hero-phone:hover,
@@ -985,10 +1049,15 @@ body {
         transform: none; /* Disable hover transforms on mobile */
     }
 
+    .btn-hero-phone:hover::before,
+    .btn-hero-devis:hover::before {
+        display: none; /* Disable shine effect on mobile */
+    }
+
     .btn-hero-phone:active,
     .btn-hero-devis:active {
-        transform: scale(0.98);
-        transition: transform 0.1s ease;
+        transform: scale(0.97);
+        transition: transform 0.15s ease;
     }
 
     .hero-actions-secondary {
