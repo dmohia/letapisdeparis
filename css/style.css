@@ -123,17 +123,13 @@ body {
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
     transition: var(--transition);
-    min-height: 80px;
-    display: flex;
-    align-items: center;
 }
 
 .nav .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem var(--spacing-md);
-    gap: 4rem;
 }
 
 .nav-logo {
@@ -183,7 +179,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
     background: linear-gradient(135deg, #fafafa 0%, #ffffff 50%, #f8f8f8 100%);
 }
 
@@ -1119,25 +1115,12 @@ body {
         display: flex;
     }
 
-    .nav {
-        min-height: 120px;
-    }
-
-    .nav .container {
-        gap: 2rem;
-    }
-
-    .nav-logo {
-        margin-left: 1rem;
-    }
-
-    .nav-logo-img {
-        height: 50px;
-    }
-
     .hero {
-        padding: 260px 0 80px;
-        margin-top: 0;
+        padding: 120px 0 80px;
+    }
+
+    .hero-logo-img {
+        height: 100px;
     }
 
     .hero .container {
@@ -1430,19 +1413,21 @@ body {
 
 /* Navigation Logo */
 .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--color-brown);
     text-decoration: none;
-    margin-left: 3rem;
 }
 
-.nav-logo-img {
-    height: 80px;
+/* Hero Logo */
+.hero-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-logo-img {
+    height: 120px;
     width: auto;
 }
 

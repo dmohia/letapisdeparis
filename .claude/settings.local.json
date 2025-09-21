@@ -15,7 +15,8 @@
       "Bash(grep:*)",
       "Bash(git checkout:*)",
       "Bash(open \"http://localhost:8001\")",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
