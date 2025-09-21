@@ -267,6 +267,33 @@ body {
     font-weight: 500;
 }
 
+.cta-phone-text {
+    margin-top: 1rem !important;
+    font-size: 1.05rem !important;
+    text-align: center;
+}
+
+.phone-link {
+    color: var(--color-brown);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background: rgba(139, 69, 19, 0.05);
+    border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.phone-link:hover {
+    color: white;
+    background: var(--color-brown);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
+}
+
 .btn-hero-main {
     background: linear-gradient(135deg, var(--color-brown) 0%, #A0522D 50%, #8B4513 100%);
     color: white;
