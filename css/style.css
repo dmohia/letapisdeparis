@@ -1115,6 +1115,18 @@ body {
         display: flex;
     }
 
+    .nav-logo {
+        margin-left: 1rem;
+    }
+
+    .nav-logo-img {
+        height: 60px;
+    }
+
+    .hero {
+        padding: 160px 0 80px;
+    }
+
     .hero .container {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
