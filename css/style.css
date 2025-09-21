@@ -196,8 +196,12 @@ body {
     font-size: 3.5rem;
     font-weight: 400;
     line-height: 1.15;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
     color: var(--color-primary);
+    text-align: center;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-accent {
@@ -212,14 +216,21 @@ body {
     line-height: 1.6;
     color: var(--color-secondary);
     margin-bottom: 2.5rem;
-    max-width: 550px;
+    max-width: 480px;
     font-weight: 300;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Hero CTA Section */
 .hero-cta {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .cta-highlight {
@@ -237,6 +248,7 @@ body {
         0 2px 12px rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
+    width: 100%;
     max-width: 480px;
 }
 
@@ -252,38 +264,52 @@ body {
 }
 
 .cta-highlight h3 {
-    color: var(--color-brown);
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 400;
     font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0;
-    font-family: var(--font-display);
     line-height: 1.3;
 }
 
 .cta-highlight p {
     color: var(--color-secondary);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin: 0;
-    font-weight: 500;
+    font-weight: 400;
+    text-align: center;
 }
 
 .cta-phone-text {
-    margin-top: 1rem !important;
-    font-size: 1.05rem !important;
+    margin-top: 0.8rem;
+    font-size: 1.05rem;
+    color: #666;
+}
+
+.cta-separator {
     text-align: center;
+    margin: 1.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--color-brown);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .phone-link {
     color: var(--color-brown);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
     display: inline-block;
-    background: rgba(139, 69, 19, 0.05);
-    border: 1px solid rgba(139, 69, 19, 0.1);
+    background: rgba(139, 69, 19, 0.04);
+    border: 1px solid rgba(139, 69, 19, 0.08);
 }
 
 .phone-link:hover {
@@ -291,7 +317,7 @@ body {
     background: var(--color-brown);
     text-decoration: none;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
+    box-shadow: 0 3px 8px rgba(139, 69, 19, 0.15);
 }
 
 .btn-hero-main {
@@ -308,6 +334,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 70px;
+    width: 100%;
     max-width: 480px;
     box-shadow:
         0 6px 24px rgba(139, 69, 19, 0.2),
@@ -1325,4 +1352,53 @@ body {
     .section-title {
         font-size: 1.75rem;
     }
+}
+
+/* Hours Section Styling */
+.hours-section {
+    margin-top: 0.5rem;
+}
+
+.main-hours {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: rgba(139, 69, 19, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-brown);
+}
+
+.appointment-note {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    font-weight: 500;
+    margin-top: 0.3rem;
+    font-style: italic;
+}
+
+.phone-hours {
+    padding: 0.8rem;
+    background: rgba(139, 69, 19, 0.03);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.phone-hours strong {
+    color: var(--color-brown);
+    font-size: 1rem;
+}
+
+/* Contact Links Styling */
+.contact-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-link:hover {
+    color: var(--color-brown);
+    border-bottom-color: var(--color-brown);
+    text-decoration: none;
 }
